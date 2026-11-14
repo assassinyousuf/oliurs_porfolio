@@ -565,6 +565,14 @@
         font-size: 0.85rem;
       }
     }
+
+    @media print {
+      header.site-header, .btn-group, .contact-row-icon, footer.site-footer, .modal { display: none !important; }
+      .page-section { display: block !important; page-break-after: always; opacity: 1 !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .banner { background: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, .summit-feature, .contact-card { break-inside: avoid; }
+    }
   </style>
 </head>
 <body>
@@ -581,6 +589,7 @@
         <button class="nav-btn" id="btn-about" onclick="switchPage('about')">About Me</button>
         <button class="nav-btn" id="btn-hobbies" onclick="switchPage('hobbies')">Hobbies & Interests</button>
         <button class="nav-btn" id="btn-contact" onclick="switchPage('contact')">Contact</button>
+        <button class="nav-btn" onclick="window.print()" title="Save portfolio as PDF document" style="background: #0284c7; color: white; border-radius: 6px; padding: 6px 12px; margin-left: 6px; font-weight: 700;">📄 Save PDF</button>
       </nav>
     </div>
   </header>
@@ -709,18 +718,22 @@
       <!-- Activity & Campus Gallery -->
       <h2 class="section-title">Campus & Extracurricular Moments</h2>
       <div class="gallery-grid">
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/FB_IMG_1794570303114.jpg" alt="Campus Event">
-        </div>
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/FB_IMG_1794570319049.jpg" alt="BRACU Adventure Club">
-        </div>
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/FB_IMG_1794570201717.jpg" alt="Team Session">
-        </div>
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/FB_IMG_1794570335328.jpg" alt="Club Activities">
-        </div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794570303114.jpg" alt="Campus Event"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794570319049.jpg" alt="BRACU Adventure Club"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794570201717.jpg" alt="Team Session"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794570335328.jpg" alt="Club Activities"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794648696318.jpg" alt="Event Moments"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794568836067.jpg" alt="Club Photoshoot"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794568935909.jpg" alt="Campus Portrait"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794569098308.jpg" alt="Student Life"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794569550557.jpg" alt="Leadership Meeting"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794569558406.jpg" alt="Club Discussion"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794570192626.jpg" alt="Campus Gathering"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/FB_IMG_1794568887967.jpg" alt="University Activities"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG-20260204-WA0008.jpg" alt="Student Moments"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG-20260204-WA0010.jpg" alt="Friends & Campus"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG-20260205-WA0000.jpg" alt="Campus Portrait"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260925_231051_935.jpg" alt="University Event"></div>
       </div>
     </div>
   </div>
@@ -752,18 +765,14 @@
       <!-- Adventure Photo Carousel / Gallery -->
       <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: var(--primary-dark);">Expedition Photo Gallery</h3>
       <div class="gallery-grid">
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/20260121_152130.jpg" alt="Trek in the Hills">
-        </div>
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/IMG_20260921_134504631_HDR.jpg" alt="Trail Views">
-        </div>
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/IMG_20260921_165825994_HDR.jpg" alt="Mountain Expedition">
-        </div>
-        <div class="gallery-item" onclick="openModal(this)">
-          <img src="assets/IMG_20260930_182325_609.jpg" alt="Adventure Moments">
-        </div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/20260121_152130.jpg" alt="Trek in the Hills"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260921_134504631_HDR.jpg" alt="Trail Views"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260921_135057335_HDR.jpg" alt="Mountain Trails"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260921_165825994_HDR.jpg" alt="Mountain Expedition"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260921_165922877_HDR.jpg" alt="Summit Route"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260322_182501.jpg" alt="Nature Views"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/IMG_20260930_182325_609.jpg" alt="Adventure Moments"></div>
+        <div class="gallery-item" onclick="openModal(this)"><img src="assets/Saka_Haphong_Summit_Banner.jpg" alt="Saka Haphong Peak"></div>
       </div>
 
       <!-- Other Passions -->
