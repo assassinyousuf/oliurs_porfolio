@@ -1,0 +1,153 @@
+================================================================================
+GOOGLE SITES PORTFOLIO CONTENT & ASSET GUIDE: OLIUR RAHMAN BIPUL
+================================================================================
+Google Sites URL: https://sites.google.com/new
+Theme Recommendation: Aristotle or Diplomat (Color: Navy Blue #1e3a8a)
+================================================================================
+
+--------------------------------------------------------------------------------
+PAGE 1: Home
+--------------------------------------------------------------------------------
+[BANNER]
+Banner Type: Banner
+Title: Welcome to My Personal Space
+Subtitle: Undergraduate BBA Student • Writer & Vocalist • Avid Adventurer
+
+[SECTION 1: HERO INTRODUCTION]
+Layout: 1 Image (Left) + Text (Right)
+Image to Upload: 01_Home/Bipul_Profile_Home.jpg
+Heading:
+Hi, I’m Oliur Rahman Bipul
+
+Body Text:
+I am an undergraduate BBA student at BRAC University with a passion for writing, singing, and exploring new places. Welcome to my personal space.
+
+Buttons (Insert -> Button):
+- Button 1: "About Me" -> links to About Me page
+- Button 2: "My Adventures" -> links to Hobbies & Interests page
+- Button 3: "Contact Me" -> links to Contact page
+
+[SECTION 2: HIGHLIGHTS]
+Layout: 3-column Content Block
+- Column 1:
+  Title: Education & Roots
+  Text: BBA student at BRAC University, originally from Habiganj, Sylhet.
+- Column 2:
+  Title: Leadership & Extracurriculars
+  Text: Assistant Director at BRACU Adventure Club & Former Secretary at BRACU Response Team.
+- Column 3:
+  Title: Summit & Expeditions
+  Text: Summited Saka Haphong and trekked Sitakunda & Thanchi trails.
+
+
+--------------------------------------------------------------------------------
+PAGE 2: About Me
+--------------------------------------------------------------------------------
+[BANNER]
+Banner Type: Banner
+Title: About Me
+
+[SECTION 1: BACKGROUND & EDUCATION]
+Heading: Background & Education
+Text / Timeline:
+- Current Studies: Pursuing a Bachelor of Business Administration (BBA) at BRAC University.
+- Higher Secondary (HSC): Brindaban Government College.
+- Secondary School (SSC): PRAN-RFL Public School.
+- Location: Originally from Habiganj, Sylhet; currently based in Merul Badda, Dhaka.
+
+[SECTION 2: LEADERSHIP & EXTRACURRICULARS]
+Heading: Leadership & Extracurriculars
+Layout: 3-column Content Block
+
+- Card 1:
+  Title: Private Tutor
+  Subtitle: Mentorship & Academic Foundations
+  Text: Passionate about teaching and mentoring students whenever the opportunity arises, helping them build strong academic foundations.
+
+- Card 2:
+  Title: Assistant Director (Publication & Marketing)
+  Subtitle: BRAC University Adventure Club
+  Text: Managing club communications, promotional campaigns, and publication materials.
+
+- Card 3:
+  Title: Former Secretary of Communications
+  Subtitle: BRACU Response Team
+  Text: Led communication initiatives focused on community service and social welfare.
+
+[SECTION 3: CAMPUS & CLUB PHOTOS]
+Layout: Image Carousel or 4-Image Content Block
+Images to Upload from 02_About_Me/:
+- FB_IMG_1794570303114.jpg
+- FB_IMG_1794570319049.jpg
+- FB_IMG_1794570201717.jpg
+- FB_IMG_1794570335328.jpg
+
+
+--------------------------------------------------------------------------------
+PAGE 3: Hobbies & Interests
+--------------------------------------------------------------------------------
+[BANNER]
+Banner Type: Banner
+Title: Hobbies & Interests
+
+[SECTION 1: TRAVELLING & ADVENTURE]
+Layout: 1 Image (Left/Top) + Text (Right/Bottom)
+Featured Image to Upload: 03_Hobbies_and_Adventure/Saka_Haphong_Summit_Banner.jpg
+
+Heading:
+Travelling & Adventure
+
+Body Text:
+I have explored diverse destinations across Bangladesh, particularly in Sylhet and Bandarban. As an active member of the BRAC University Adventure Club, I have trekked through Sitakunda and Thanchi, and successfully summited Saka Haphong—Bangladesh’s highest unofficial peak located along the Bangladesh–Myanmar border.
+
+[EXPEDITION CAROUSEL]
+Insert -> Image Carousel:
+Select and upload from 03_Hobbies_and_Adventure/:
+- 20260121_152130.jpg
+- IMG_20260921_134504631_HDR.jpg
+- IMG_20260921_165825994_HDR.jpg
+- IMG_20260930_182325_609.jpg
+(Under Carousel Settings -> Check "Auto-start")
+
+[SECTION 2: CREATIVE & PERSONAL PASSIONS]
+Layout: 3-column Content Block
+
+- Column 1:
+  Title: Writing
+  Text: I enjoy expressing ideas through poetry and reflective essays on everyday life and random observations.
+
+- Column 2:
+  Title: Music & Singing
+  Text: Music is a big part of my downtime—I love both singing and listening to a wide range of genres.
+
+- Column 3:
+  Title: Cooking
+  Text: In my free time, I enjoy experimenting in the kitchen and cooking meals for myself and my family.
+
+
+--------------------------------------------------------------------------------
+PAGE 4: Contact
+--------------------------------------------------------------------------------
+[BANNER]
+Banner Type: Title Only
+Title: Get in Touch
+
+[CONTACT DETAILS]
+Centered Subtitle:
+Feel free to reach out for collaborations, networking, or a friendly conversation.
+
+Links & Contact Channels:
+- Email: oliurrahmanbipul91221@gmail.com  (Link: mailto:oliurrahmanbipul91221@gmail.com)
+- LinkedIn: [Insert your LinkedIn profile link]
+- Instagram: [Insert your Instagram handle/link]
+
+================================================================================
+PUBLISHING YOUR SITE
+================================================================================
+1. Click the blue "Publish" button at the top-right.
+2. Web address slug: enter "oliurrahmanbipul"
+3. Click Publish!
+Your live portfolio URL will be:
+https://sites.google.com/view/oliurrahmanbipul
+================================================================================
+

@@ -1,0 +1,107 @@
+================================================================================
+⚡ FASTEST 3-MINUTE EXAM SURVIVAL GUIDE FOR GOOGLE SITES ⚡
+================================================================================
+Don't worry about complex layouts or spending hours! 
+Follow these exact steps. You will be 100% finished in under 3 minutes.
+================================================================================
+
+STEP 0: OPEN GOOGLE SITES
+Go to: https://sites.google.com/new
+Click the big blank "+" (Blank Site).
+At top left, type your name: Oliur Rahman Bipul
+
+
+STEP 1: MAKE THE 4 PAGES (Takes 20 seconds)
+On the right sidebar, click "Pages".
+You will see "Home".
+At the bottom, click "+" (New Page) 3 times to add:
+  1. About Me
+  2. Hobbies & Interests
+  3. Contact
+(Now you have all 4 required pages in the menu!)
+
+
+--------------------------------------------------------------------------------
+PAGE 1: HOME (Takes 40 seconds)
+--------------------------------------------------------------------------------
+1. Title on the big banner: Click it and paste:
+   Welcome to My Personal Space
+
+2. On the right sidebar, click "Insert" -> click "Text box". Paste:
+   Hi, I’m Oliur Rahman Bipul. I am an undergraduate BBA student at BRAC University with a passion for writing, singing, and exploring new places. Welcome to my personal space.
+
+3. Drag your photo:
+   From your opened "Google_Sites_Assets\01_Home\" folder:
+   Drag "Bipul_Profile_Home.jpg" directly onto the page!
+
+
+--------------------------------------------------------------------------------
+PAGE 2: ABOUT ME (Takes 40 seconds)
+--------------------------------------------------------------------------------
+Click "Pages" on the right sidebar -> click "About Me".
+
+1. Banner title is already "About Me".
+2. Click "Insert" -> "Text box". Paste:
+
+Background & Education
+• Current Studies: Bachelor of Business Administration (BBA) at BRAC University
+• Higher Secondary (HSC): Brindaban Government College
+• Secondary School (SSC): PRAN-RFL Public School
+• Location: Originally from Habiganj, Sylhet; currently based in Merul Badda, Dhaka.
+
+Leadership & Extracurriculars
+• Private Tutor: Passionate about teaching and mentoring students, helping them build strong academic foundations.
+• Assistant Director (Publication & Marketing) — BRAC University Adventure Club: Managing club communications, promotional campaigns, and publication materials.
+• Former Secretary of Communications — BRACU Response Team: Led communication initiatives focused on community service and social welfare.
+
+3. Drag 1 or 2 photos from "Google_Sites_Assets\02_About_Me\" onto the page.
+
+
+--------------------------------------------------------------------------------
+PAGE 3: HOBBIES & INTERESTS (Takes 40 seconds)
+--------------------------------------------------------------------------------
+Click "Pages" on the right sidebar -> click "Hobbies & Interests".
+
+1. Banner title is already "Hobbies & Interests".
+2. Click "Insert" -> "Text box". Paste:
+
+Travelling & Adventure
+I have explored diverse destinations across Bangladesh, particularly in Sylhet and Bandarban. As an active member of the BRAC University Adventure Club, I have trekked through Sitakunda and Thanchi, and successfully summited Saka Haphong—Bangladesh’s highest unofficial peak located along the Bangladesh–Myanmar border.
+
+Other Passions
+• Writing: I enjoy expressing ideas through poetry and reflective essays on everyday life and random observations.
+• Music & Singing: Music is a big part of my downtime—I love both singing and listening to a wide range of genres.
+• Cooking: In my free time, I enjoy experimenting in the kitchen and cooking meals for myself and my family.
+
+3. Drag the summit photo:
+   From "Google_Sites_Assets\03_Hobbies_and_Adventure\":
+   Drag "Saka_Haphong_Summit_Banner.jpg" directly onto the page!
+
+
+--------------------------------------------------------------------------------
+PAGE 4: CONTACT (Takes 20 seconds)
+--------------------------------------------------------------------------------
+Click "Pages" on the right sidebar -> click "Contact".
+
+1. Click "Insert" -> "Text box". Paste:
+
+Feel free to reach out for collaborations, networking, or a friendly conversation.
+
+• Email: oliurrahmanbipul91221@gmail.com
+• LinkedIn: linkedin.com/in/oliurrahmanbipul
+• Instagram: @oliurrahmanbipul
+
+
+--------------------------------------------------------------------------------
+FINAL STEP: PUBLISH & SUBMIT! (Takes 10 seconds)
+--------------------------------------------------------------------------------
+1. At the top-right corner, click the blue "Publish" button.
+2. Web address box: type "oliurrahmanbipul"
+3. Click "Publish".
+
+Copy your published link to submit:
+https://sites.google.com/view/oliurrahmanbipul
+
+YOU ARE DONE! Now go focus 100% on your exam tomorrow! Best of luck!
+================================================================================
+

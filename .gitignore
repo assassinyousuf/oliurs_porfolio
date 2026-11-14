@@ -1,0 +1,4 @@
+*.zip
+extracted/
+*.py
+__pycache__/

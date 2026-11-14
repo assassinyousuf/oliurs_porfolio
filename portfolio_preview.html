@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliur Rahman Bipul | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-dark: #172554;
+      --accent: #0284c7;
+      --accent-warm: #f59e0b;
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.06);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation (Google Sites Style) */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: var(--primary-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-brand span.badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #eff6ff;
+      color: var(--primary);
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid #bfdbfe;
+    }
+
+    nav.site-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      padding: 8px 16px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover {
+      color: var(--primary);
+      background-color: #f1f5f9;
+    }
+
+    .nav-btn.active {
+      color: var(--primary);
+      background-color: #eff6ff;
+      font-weight: 700;
+    }
+
+    /* Page View Containers */
+    .page-section {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .page-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Banner Component */
+    .banner {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0369a1 100%);
+      color: #ffffff;
+      padding: 56px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .banner h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .banner p {
+      font-size: 1.15rem;
+      color: #e0f2fe;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    /* Content Layout */
+    .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    /* Grid & Cards */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: center;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 40px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 48px;
+    }
+
+    .profile-photo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .profile-photo-wrap img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      border: 4px solid #ffffff;
+    }
+
+    .hero-info h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .hero-info p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    /* Section Cards */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: var(--border-color);
+    }
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      background: #eff6ff;
+      color: var(--primary);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Timeline / Education Styling */
+    .edu-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .edu-item {
+      display: flex;
+      gap: 20px;
+      background: var(--bg-card);
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--primary-light);
+    }
+
+    .edu-icon {
+      font-size: 1.8rem;
+      color: var(--primary);
+    }
+
+    .edu-content h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .edu-content .edu-sub {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .edu-content p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Feature Banner for Saka Haphong */
+    .summit-feature {
+      background: #0f172a;
+      border-radius: var(--radius);
+      overflow: hidden;
+      color: white;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .summit-img-wrap {
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .summit-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .summit-feature:hover .summit-img-wrap img {
+      transform: scale(1.02);
+    }
+
+    .summit-tag {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(6px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .summit-body {
+      padding: 32px;
+    }
+
+    .summit-body h3 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #f8fafc;
+    }
+
+    .summit-body p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    /* Photo Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-item {
+      height: 200px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Contact Details */
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+      font-weight: 600;
+    }
+
+    .contact-row:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      transform: translateY(-2px);
+    }
+
+    .contact-row-icon {
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #1e293b;
+      margin-top: 60px;
+    }
+
+    footer.site-footer p {
+      margin-bottom: 8px;
+    }
+
+    /* Modal / Lightbox */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 768px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+      .banner h1 {
+        font-size: 2.1rem;
+      }
+      .nav-container {
+        padding: 0 16px;
+      }
+      .nav-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation (Google Sites Navigation Header) -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#home" class="site-brand" onclick="switchPage('home')">
+        Oliur Rahman Bipul
+        <span class="badge">Portfolio</span>
+      </a>
+      <nav class="site-nav">
+        <button class="nav-btn active" id="btn-home" onclick="switchPage('home')">Home</button>
+        <button class="nav-btn" id="btn-about" onclick="switchPage('about')">About Me</button>
+        <button class="nav-btn" id="btn-hobbies" onclick="switchPage('hobbies')">Hobbies & Interests</button>
+        <button class="nav-btn" id="btn-contact" onclick="switchPage('contact')">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== PAGE 1: HOME ==================== -->
+  <div id="page-home" class="page-section active">
+    <div class="banner">
+      <h1>Welcome to My Personal Space</h1>
+      <p>Undergraduate BBA Student • Writer & Vocalist • Avid Adventurer</p>
+    </div>
+
+    <div class="main-container">
+      <div class="hero-split">
+        <div class="profile-photo-wrap">
+          <img src="Google_Sites_Assets/01_Home/Bipul_Profile_Home.jpg" alt="Oliur Rahman Bipul">
+        </div>
+        <div class="hero-info">
+          <div class="badge-pill">👋 Introduction</div>
+          <h2>Hi, I’m Oliur Rahman Bipul</h2>
+          <p class="lead">
+            I am an undergraduate BBA student at <strong>BRAC University</strong> with a passion for writing, singing, and exploring new places. Welcome to my personal space.
+          </p>
+          <div class="btn-group">
+            <button class="btn btn-primary" onclick="switchPage('about')">Learn More About Me &rarr;</button>
+            <button class="btn btn-secondary" onclick="switchPage('hobbies')">Expeditions & Hobbies</button>
+            <button class="btn btn-secondary" onclick="switchPage('contact')">Get in Touch</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Highlights Preview -->
+      <h2 class="section-title">Portfolio Highlights</h2>
+      <div class="cards-grid-3">
+        <div class="card" onclick="switchPage('about')" style="cursor: pointer;">
+          <div class="card-icon">🎓</div>
+          <h3>Education & Roots</h3>
+          <p>BBA candidate at BRAC University. From Habiganj, Sylhet to Dhaka, committed to continuous academic and personal growth.</p>
+        </div>
+        <div class="card" onclick="switchPage('about')" style="cursor: pointer;">
+          <div class="card-icon">🤝</div>
+          <h3>Club Leadership</h3>
+          <p>Assistant Director at BRAC University Adventure Club & former Secretary of Communications at BRACU Response Team.</p>
+        </div>
+        <div class="card" onclick="switchPage('hobbies')" style="cursor: pointer;">
+          <div class="card-icon">🏔️</div>
+          <h3>Summit & Adventure</h3>
+          <p>Summited Saka Haphong, Bangladesh's highest unofficial peak, and trekked through Sitakunda & Thanchi trails.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2: ABOUT ME ==================== -->
+  <div id="page-about" class="page-section">
+    <div class="banner">
+      <h1>About Me</h1>
+      <p>My academic foundation, roots, leadership experiences, and community impact.</p>
+    </div>
+
+    <div class="main-container">
+      <!-- Background & Education -->
+      <h2 class="section-title">Background & Education</h2>
+      <div class="edu-timeline">
+        <div class="edu-item">
+          <div class="edu-icon">🏛️</div>
+          <div class="edu-content">
+            <h4>Bachelor of Business Administration (BBA)</h4>
+            <div class="edu-sub">BRAC University • Current Studies</div>
+            <p>Building core expertise in business leadership, marketing communications, and strategic management.</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-icon">📜</div>
+          <div class="edu-content">
+            <h4>Higher Secondary Certificate (HSC)</h4>
+            <div class="edu-sub">Brindaban Government College</div>
+            <p>Graduated with strong foundations in academic excellence and active student participation.</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-icon">🏫</div>
+          <div class="edu-content">
+            <h4>Secondary School Certificate (SSC)</h4>
+            <div class="edu-sub">PRAN-RFL Public School</div>
+            <p>Developed early leadership, communicative skills, and passion for diverse extracurriculars.</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-icon">📍</div>
+          <div class="edu-content">
+            <h4>Origin & Location</h4>
+            <div class="edu-sub">Habiganj, Sylhet &rarr; Merul Badda, Dhaka</div>
+            <p>Originally hailing from Habiganj, Sylhet; currently residing in Merul Badda, Dhaka for university studies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leadership & Extracurriculars -->
+      <h2 class="section-title">Leadership & Extracurriculars</h2>
+      <div class="cards-grid-3">
+        <div class="card">
+          <div class="card-icon">🧗</div>
+          <h3>Assistant Director</h3>
+          <div style="font-weight: 700; color: var(--primary); font-size: 0.9rem; margin-bottom: 8px;">BRAC University Adventure Club (Publication & Marketing)</div>
+          <p>Directing club communications, conceptualizing creative promotional campaigns, and managing high-impact publication materials for university-wide expeditions.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Former Secretary of Communications</h3>
+          <div style="font-weight: 700; color: var(--primary); font-size: 0.9rem; margin-bottom: 8px;">BRACU Response Team</div>
+          <p>Spearheaded community service communication initiatives, social welfare outreach campaigns, and emergency volunteer coordination.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Private Tutor & Academic Mentor</h3>
+          <div style="font-weight: 700; color: var(--primary); font-size: 0.9rem; margin-bottom: 8px;">Mentorship & Education</div>
+          <p>Passionate about teaching and mentoring students whenever the opportunity arises, helping them build strong conceptual foundations and academic discipline.</p>
+        </div>
+      </div>
+
+      <!-- Activity & Campus Gallery -->
+      <h2 class="section-title">Campus & Extracurricular Moments</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/02_About_Me/FB_IMG_1794570303114.jpg" alt="Campus Event">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/02_About_Me/FB_IMG_1794570319049.jpg" alt="BRACU Adventure Club">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/02_About_Me/FB_IMG_1794570201717.jpg" alt="Team Session">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/02_About_Me/FB_IMG_1794570335328.jpg" alt="Club Activities">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 3: HOBBIES & INTERESTS ==================== -->
+  <div id="page-hobbies" class="page-section">
+    <div class="banner">
+      <h1>Hobbies & Interests</h1>
+      <p>Exploring mountain trails, creating verses, vocal music, and culinary art.</p>
+    </div>
+
+    <div class="main-container">
+      <!-- Travelling & Adventure Featured Section -->
+      <h2 class="section-title">Travelling & Adventure</h2>
+      
+      <div class="summit-feature">
+        <div class="summit-img-wrap">
+          <img src="Google_Sites_Assets/03_Hobbies_and_Adventure/Saka_Haphong_Summit_Banner.jpg" alt="Saka Haphong Summit">
+          <span class="summit-tag">🏔️ Saka Haphong Summit • 3,451 ft</span>
+        </div>
+        <div class="summit-body">
+          <h3>Summitting Saka Haphong & Mountain Expeditions</h3>
+          <p>
+            I have explored diverse destinations across Bangladesh, particularly in <strong>Sylhet</strong> and <strong>Bandarban</strong>. As an active member of the <strong>BRAC University Adventure Club</strong>, I have trekked through Sitakunda and Thanchi, and successfully summited <strong>Saka Haphong</strong>—Bangladesh’s highest unofficial peak located along the rugged Bangladesh–Myanmar border.
+          </p>
+        </div>
+      </div>
+
+      <!-- Adventure Photo Carousel / Gallery -->
+      <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: var(--primary-dark);">Expedition Photo Gallery</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/03_Hobbies_and_Adventure/20260121_152130.jpg" alt="Trek in the Hills">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/03_Hobbies_and_Adventure/IMG_20260921_134504631_HDR.jpg" alt="Trail Views">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/03_Hobbies_and_Adventure/IMG_20260921_165825994_HDR.jpg" alt="Mountain Expedition">
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="Google_Sites_Assets/03_Hobbies_and_Adventure/IMG_20260930_182325_609.jpg" alt="Adventure Moments">
+        </div>
+      </div>
+
+      <!-- Other Passions -->
+      <h2 class="section-title">Creative & Personal Passions</h2>
+      <div class="cards-grid-3">
+        <div class="card">
+          <div class="card-icon">✍️</div>
+          <h3>Writing & Poetry</h3>
+          <p>I enjoy expressing ideas through poetry and reflective essays on everyday life and random observations. Writing serves as my personal medium for introspection and sharing perspectives.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎵</div>
+          <h3>Music & Singing</h3>
+          <p>Music is a big part of my downtime—I love both singing and listening to a wide range of genres. It brings inspiration, balance, and creative energy to my daily routine.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🍳</div>
+          <h3>Cooking</h3>
+          <p>In my free time, I enjoy experimenting in the kitchen and cooking meals for myself and my family. Crafting wholesome flavors is both a relaxing art and a joyful pastime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 4: CONTACT ==================== -->
+  <div id="page-contact" class="page-section">
+    <div class="banner">
+      <h1>Get in Touch</h1>
+      <p>Feel free to reach out for collaborations, networking, or a friendly conversation.</p>
+    </div>
+
+    <div class="main-container">
+      <div class="contact-card">
+        <div style="font-size: 3rem; margin-bottom: 12px;">📬</div>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 8px;">Let's Connect</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Whether you have an inquiry, a project proposal, an adventure idea, or just want to say hi, my inbox is always open.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:oliurrahmanbipul91221@gmail.com" class="contact-row">
+            <div class="contact-row-icon">✉️</div>
+            <div style="text-align: left; flex: 1;">
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Direct Email</div>
+              <div style="color: var(--primary);">oliurrahmanbipul91221@gmail.com</div>
+            </div>
+            <div style="color: var(--primary); font-size: 1.2rem;">&rarr;</div>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div class="contact-row-icon">💼</div>
+            <div style="text-align: left; flex: 1;">
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Professional Network</div>
+              <div style="color: var(--primary);">Connect on LinkedIn</div>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.9rem;">Add Profile URL &nearr;</div>
+          </a>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div class="contact-row-icon">📸</div>
+            <div style="text-align: left; flex: 1;">
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Visual Diary & Updates</div>
+              <div style="color: var(--primary);">Follow on Instagram</div>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.9rem;">Add Profile URL &nearr;</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Oliur Rahman Bipul. All rights reserved.</p>
+    <p style="font-size: 0.8rem; color: #64748b;">Designed for Google Sites Portfolio Deployment</p>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal" id="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Enlarged View">
+  </div>
+
+  <script>
+    function switchPage(pageKey) {
+      document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+
+      const targetSection = document.getElementById('page-' + pageKey);
+      const targetBtn = document.getElementById('btn-' + pageKey);
+
+      if (targetSection) targetSection.classList.add('active');
+      if (targetBtn) targetBtn.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openModal(el) {
+      const img = el.querySelector('img');
+      if (img) {
+        document.getElementById('modal-img').src = img.src;
+        document.getElementById('modal').style.display = 'flex';
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+
